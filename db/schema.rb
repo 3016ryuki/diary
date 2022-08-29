@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_04_140246) do
+ActiveRecord::Schema.define(version: 2022_08_24_045909) do
 
   create_table "diaries", charset: "utf8mb4", force: :cascade do |t|
     t.string "title"
     t.text "body"
+    t.datetime "kept_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -12,6 +12,7 @@ gem 'turbolinks', '5.2.1'
 gem 'jbuilder', '2.11.5'
 gem 'bootsnap', '1.10.1', require: false
 
+
 group :development, :test do
   gem 'byebug', '11.1.3'
 end
@@ -31,3 +32,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'ransack', '~> 2.3', '>= 2.3.2'
+gem 'haml-rails'

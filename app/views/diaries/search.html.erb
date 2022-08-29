@@ -1,0 +1,32 @@
+<h1>検索結果</h1>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>タイトル</th>
+      <th>本文</th>
+      <th>日にち</th>
+      <th>作成日時</th>
+      <th>更新日時</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @results.each do |diary| %>
+      <tr>
+        <td><%= diary.id %></td>
+        <td><%= diary.title %></td>
+        <td><%= diary.body %></td>
+        <td><%= diary.kept_at.strftime("%Y/%m/%d") if diary.kept_at.present? %></td>
+        <td><%= l diary.created_at %></td>
+        <td><%= l diary. updated_at%></td>
+        <td><%= link_to '確認', diary %></td>
+        <td><%= link_to '編集', edit_diary_path(diary) %></td>
+        <td><%= link_to '削除', diary, method: :delete, data: { confirm: '本当に消してもいいですか?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to '一覧画面に戻る', diaries_path %>

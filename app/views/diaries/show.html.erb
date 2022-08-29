@@ -14,7 +14,10 @@
   <%= @diary.body %>
 </p>
 
-
+<p>
+  <strong>日にち:</strong>
+  <%= @diary.kept_at.strftime("%Y/%m/%d") if @diary.kept_at.present? %>
+</p>
 
 <p>
   <strong>登録日時:</strong>
